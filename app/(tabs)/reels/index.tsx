@@ -1,11 +1,13 @@
-import { View, Text } from 'react-native'
+import { Text } from 'react-native'
 import React from 'react'
+
+import TabSafeAreaSafeAreaView from '@/components/TabSafeAreaView'
 
 const Reels = () => {
   return (
-    <View>
+    <TabSafeAreaSafeAreaView>
       <Text>Reels</Text>
-    </View>
+    </TabSafeAreaSafeAreaView>
   )
 }
 

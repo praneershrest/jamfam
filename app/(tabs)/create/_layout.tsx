@@ -7,7 +7,6 @@ const CreateLayout: React.FC = () => {
         name="index"
         options={{
           title: 'Create',
-          headerShown: false,
         }}
       />
     </Stack>

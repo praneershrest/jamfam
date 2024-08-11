@@ -9,6 +9,7 @@ const TabLayout = () => {
       <Tabs.Screen
         name="home"
         options={{
+          headerShown: false,
           title: 'Home',
           tabBarIcon: ({ color }) => <TabBarIcon name="home" color={color} />,
         }}
@@ -16,6 +17,7 @@ const TabLayout = () => {
       <Tabs.Screen
         name="create"
         options={{
+          headerShown: false,
           title: 'Create',
           tabBarIcon: ({ color }) => <TabBarIcon name="add-circle-outline" color={color} />,
         }}
@@ -23,6 +25,7 @@ const TabLayout = () => {
       <Tabs.Screen
         name="reels"
         options={{
+          headerShown: false,
           title: 'Reels',
           tabBarIcon: ({ color }) => <TabBarIcon name="album" color={color} />,
         }}

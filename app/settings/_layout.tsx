@@ -1,16 +1,17 @@
 import { Stack } from 'expo-router'
 
-const ReelsLayout: React.FC = () => {
+const SettingsLayout: React.FC = () => {
   return (
     <Stack>
       <Stack.Screen
         name="index"
         options={{
-          title: 'Reels',
+          title: 'Settings',
+          headerShown: false,
         }}
       />
     </Stack>
   )
 }
 
-export default ReelsLayout
+export default SettingsLayout
