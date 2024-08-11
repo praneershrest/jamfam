@@ -9,14 +9,32 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "diagnose": "npx expo-doctor",
-    "test": "jest",
+    "test": "jest --watch --coverage=false --changedSince=origin/main",
+    "test:debug": "jest -o --watch --coverage=false",
+    "test:final": "jest",
+    "update-snapshots": "jest -u --coverage=false",
     "lint": "expo lint",
     "format": "prettier -c .",
     "format:fix": "prettier . --write",
     "prepare": "husky"
   },
   "jest": {
-    "preset": "jest-expo"
+    "preset": "jest-expo",
+    "transformIgnorePatterns": [
+      "node_modules/(?!((jest-)?react-native|@react-native(-community)?)|expo(nent)?|@expo(nent)?/.*|@expo-google-fonts/.*|react-navigation|@react-navigation/.*|@sentry/react-native|native-base|react-native-svg)"
+    ],
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "**/*.{ts,tsx,js,jsx}",
+      "!**/coverage/**",
+      "!**/node_modules/**",
+      "!**/babel.config.js",
+      "!**/expo-env.d.ts",
+      "!**/.expo/**",
+      "!**/.eslintrc.js",
+      "!**/app-example/**",
+      "!**/scripts/**"
+    ]
   },
   "dependencies": {
     "@expo/vector-icons": "^14.0.2",
@@ -41,9 +59,9 @@
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
+    "@testing-library/react-native": "^12.5.3",
     "@types/jest": "^29.5.12",
     "@types/react": "~18.2.45",
-    "@types/react-test-renderer": "^18.0.7",
     "eslint": "^8.57.0",
     "eslint-config-expo": "^7.1.2",
     "eslint-config-prettier": "^9.1.0",
@@ -53,7 +71,6 @@
     "jest-expo": "~51.0.3",
     "lint-staged": "^15.2.8",
     "prettier": "^3.3.3",
-    "react-test-renderer": "18.2.0",
     "typescript": "~5.3.3"
   },
   "private": true,
