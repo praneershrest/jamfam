@@ -1,48 +1,30 @@
-import { MaterialIcons } from '@expo/vector-icons'
 import { Tabs } from 'expo-router'
 
-/**
- * TODO:
- * Create components with styling for Bottom Tabs
- * Styling constants should be set up through a theme configuration
- */
-const TEMPORARY_CONSTANTS = {
-  tabBarActiveTintColor: 'blue',
-  tabBarIconSize: 28,
-}
+import { Colors } from '@/constants/Colors'
+import { TabBarIcon } from '@/components/TabBarIcon'
 
 const TabLayout = () => {
   return (
-    <Tabs screenOptions={{ tabBarActiveTintColor: TEMPORARY_CONSTANTS.tabBarActiveTintColor }}>
+    <Tabs screenOptions={{ tabBarActiveTintColor: Colors.light.tabIconSelected }}>
       <Tabs.Screen
         name="home"
         options={{
           title: 'Home',
-          tabBarIcon: ({ color }) => (
-            <MaterialIcons size={TEMPORARY_CONSTANTS.tabBarIconSize} name="home" color={color} />
-          ),
+          tabBarIcon: ({ color }) => <TabBarIcon name="home" color={color} />,
         }}
       />
       <Tabs.Screen
         name="create"
         options={{
           title: 'Create',
-          tabBarIcon: ({ color }) => (
-            <MaterialIcons
-              size={TEMPORARY_CONSTANTS.tabBarIconSize}
-              name="add-circle-outline"
-              color={color}
-            />
-          ),
+          tabBarIcon: ({ color }) => <TabBarIcon name="add-circle-outline" color={color} />,
         }}
       />
       <Tabs.Screen
         name="reels"
         options={{
           title: 'Reels',
-          tabBarIcon: ({ color }) => (
-            <MaterialIcons size={TEMPORARY_CONSTANTS.tabBarIconSize} name="album" color={color} />
-          ),
+          tabBarIcon: ({ color }) => <TabBarIcon name="album" color={color} />,
         }}
       />
     </Tabs>
