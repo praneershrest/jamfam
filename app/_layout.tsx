@@ -1,6 +1,7 @@
 import { Stack } from 'expo-router'
 import * as SplashScreen from 'expo-splash-screen'
 import { useEffect, useState } from 'react'
+import { SafeAreaProvider } from 'react-native-safe-area-context'
 
 /* Prevent the splash screen from auto-hiding before asset loading is complete.
  * Call this in global scope without awaiting, otherwise this might be called too late, when the splash screen is already hidden.
@@ -37,9 +38,11 @@ export default function RootLayout() {
   }
 
   return (
-    <Stack>
-      <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-      <Stack.Screen name="+not-found" />
-    </Stack>
+    <SafeAreaProvider>
+      <Stack>
+        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+        <Stack.Screen name="+not-found" />
+      </Stack>
+    </SafeAreaProvider>
   )
 }

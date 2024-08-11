@@ -3,12 +3,12 @@ import React from 'react'
 
 import TabSafeAreaSafeAreaView from '@/components/TabSafeAreaView'
 
-const Create = () => {
+const Settings = () => {
   return (
     <TabSafeAreaSafeAreaView>
-      <Text>Create</Text>
+      <Text>Settings</Text>
     </TabSafeAreaSafeAreaView>
   )
 }
 
-export default Create
+export default Settings

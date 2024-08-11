@@ -1,11 +1,13 @@
-import { View, Text } from 'react-native'
+import { Text } from 'react-native'
 import React from 'react'
+
+import TabSafeAreaSafeAreaView from '@/components/TabSafeAreaView'
 
 const Home = () => {
   return (
-    <View>
+    <TabSafeAreaSafeAreaView>
       <Text>Home</Text>
-    </View>
+    </TabSafeAreaSafeAreaView>
   )
 }
 
