@@ -1,9 +1,16 @@
 import { Text } from 'react-native'
-import React from 'react'
+import React, { useEffect } from 'react'
+import { useNavigation } from 'expo-router'
 
 import TabSafeAreaSafeAreaView from '@/components/TabSafeAreaView'
 
 const Settings = () => {
+  const navigation = useNavigation()
+
+  useEffect(() => {
+    navigation.setOptions({ title: 'Settings' })
+  }, [navigation])
+
   return (
     <TabSafeAreaSafeAreaView>
       <Text>Settings</Text>

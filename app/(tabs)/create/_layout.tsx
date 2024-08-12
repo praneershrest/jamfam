@@ -1,6 +1,6 @@
 import { Stack } from 'expo-router'
 
-const CreateLayout: React.FC = () => {
+const CreateLayout = () => {
   return (
     <Stack>
       <Stack.Screen

@@ -2,7 +2,7 @@ import React from 'react'
 import { render } from '@testing-library/react-native'
 import { MaterialIcons } from '@expo/vector-icons'
 
-import { TabBarIcon } from '@/components/TabBarIcon'
+import TabBarIcon from '@/components/TabBarIcon'
 
 // Mocking the MaterialIcons component
 jest.mock('@expo/vector-icons', () => ({

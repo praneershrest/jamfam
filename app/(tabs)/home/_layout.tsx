@@ -1,22 +1,24 @@
-import { Stack, Link } from 'expo-router'
-import { Pressable } from 'react-native'
+import { Stack } from 'expo-router'
 
-import { TabBarIcon } from '@/components/TabBarIcon'
+import TabBarIcon from '@/components/TabBarIcon'
+import TabBarLink from '@/components/TabBarLink'
 
-const HomeLayout: React.FC = () => {
+const HomeLayout = () => {
   return (
     <Stack>
       <Stack.Screen
         name="index"
         options={{
           title: 'Home',
+          headerLeft: () => (
+            <TabBarLink href="/home/settings">
+              <TabBarIcon name="settings" />
+            </TabBarLink>
+          ),
           headerRight: () => (
-            // TODO: Replace with a custom component
-            <Link href="/settings" asChild>
-              <Pressable>
-                <TabBarIcon name="settings" />
-              </Pressable>
-            </Link>
+            <TabBarLink href="/home/messages">
+              <TabBarIcon name="message" />
+            </TabBarLink>
           ),
         }}
       />
