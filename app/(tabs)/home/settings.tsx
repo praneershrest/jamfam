@@ -1,15 +1,15 @@
 import { Text } from 'react-native'
 import React from 'react'
 
-import TabSafeAreaSafeAreaView from '@/components/TabSafeAreaView'
+import TabSafeAreaView from '@/components/TabSafeAreaView'
 import CustomHeader from '@/components/CustomHeader'
 
 const Settings = () => {
   return (
     <CustomHeader title="Settings">
-      <TabSafeAreaSafeAreaView>
+      <TabSafeAreaView>
         <Text>Settings</Text>
-      </TabSafeAreaSafeAreaView>
+      </TabSafeAreaView>
     </CustomHeader>
   )
 }

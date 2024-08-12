@@ -3,7 +3,7 @@ import { Text } from 'react-native'
 import { render } from '@testing-library/react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 
-import TabSafeAreaSafeAreaView from '@/components/TabSafeAreaView'
+import TabSafeAreaView from '@/components/TabSafeAreaView'
 
 jest.mock('react-native-safe-area-context', () => {
   return {
@@ -11,14 +11,14 @@ jest.mock('react-native-safe-area-context', () => {
   }
 })
 
-describe('TabSafeAreaSafeAreaView Component', () => {
+describe('TabSafeAreaView Component', () => {
   it('should render children correctly', () => {
     const testMessage = 'Test Child Component'
 
     const { getByText } = render(
-      <TabSafeAreaSafeAreaView>
+      <TabSafeAreaView>
         <Text>{testMessage}</Text>
-      </TabSafeAreaSafeAreaView>,
+      </TabSafeAreaView>,
     )
 
     // Check if the child component is rendered
@@ -27,9 +27,9 @@ describe('TabSafeAreaSafeAreaView Component', () => {
 
   it('should apply correct SafeAreaView edges prop', () => {
     render(
-      <TabSafeAreaSafeAreaView>
+      <TabSafeAreaView>
         <></>
-      </TabSafeAreaSafeAreaView>,
+      </TabSafeAreaView>,
     )
 
     // Check if SafeAreaView was called with correct "edges" prop
