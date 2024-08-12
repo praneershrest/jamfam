@@ -8,7 +8,7 @@ import { SafeAreaProvider } from 'react-native-safe-area-context'
  */
 SplashScreen.preventAutoHideAsync()
 
-export default function RootLayout() {
+const RootLayout = () => {
   const [appIsReady, setAppIsReady] = useState<boolean>(false)
 
   useEffect(() => {
@@ -46,3 +46,5 @@ export default function RootLayout() {
     </SafeAreaProvider>
   )
 }
+
+export default RootLayout

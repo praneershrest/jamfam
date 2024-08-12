@@ -4,7 +4,7 @@ import { StyleSheet } from 'react-native'
 import { ThemedText } from '@/app-example/components/ThemedText'
 import { ThemedView } from '@/app-example/components/ThemedView'
 
-export default function NotFoundScreen() {
+const NotFoundScreen = () => {
   return (
     <>
       <Stack.Screen options={{ title: 'Oops!' }} />
@@ -30,3 +30,5 @@ const styles = StyleSheet.create({
     paddingVertical: 15,
   },
 })
+
+export default NotFoundScreen
