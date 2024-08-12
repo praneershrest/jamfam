@@ -1,20 +1,16 @@
 import { Text } from 'react-native'
-import React, { useEffect } from 'react'
-import { useNavigation } from 'expo-router'
+import React from 'react'
 
 import TabSafeAreaSafeAreaView from '@/components/TabSafeAreaView'
+import CustomHeader from '@/components/CustomHeader'
 
 const Settings = () => {
-  const navigation = useNavigation()
-
-  useEffect(() => {
-    navigation.setOptions({ title: 'Settings' })
-  }, [navigation])
-
   return (
-    <TabSafeAreaSafeAreaView>
-      <Text>Settings</Text>
-    </TabSafeAreaSafeAreaView>
+    <CustomHeader title="Settings">
+      <TabSafeAreaSafeAreaView>
+        <Text>Settings</Text>
+      </TabSafeAreaSafeAreaView>
+    </CustomHeader>
   )
 }
 
