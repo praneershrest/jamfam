@@ -1,8 +1,9 @@
 import React from 'react'
 import { render } from '@testing-library/react-native'
-import CustomHeader from '@/components/CustomHeader'
 import { useNavigation } from 'expo-router'
 import { Text } from 'react-native'
+
+import CustomHeader from '@/components/CustomHeader'
 
 // Mock useNavigation from expo-router
 jest.mock('expo-router', () => ({
