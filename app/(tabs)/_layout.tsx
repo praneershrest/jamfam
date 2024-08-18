@@ -30,6 +30,14 @@ const TabLayout = () => {
           tabBarIcon: ({ color }) => <TabBarIcon name="album" color={color} />,
         }}
       />
+      <Tabs.Screen
+        name="profile"
+        options={{
+          headerShown: false,
+          title: 'Profile',
+          tabBarIcon: ({ color }) => <TabBarIcon name="account-circle" color={color} />,
+        }}
+      />
     </Tabs>
   )
 }
