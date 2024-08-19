@@ -1,7 +1,7 @@
 import { Tabs } from 'expo-router'
 
 import { Colors } from '@/constants/Colors'
-import TabBarIcon from '@/components/TabBarIcon'
+import VectorIcon from '@/components/VectorIcon'
 
 const TabLayout = () => {
   return (
@@ -11,7 +11,7 @@ const TabLayout = () => {
         options={{
           headerShown: false,
           title: 'Home',
-          tabBarIcon: ({ color }) => <TabBarIcon name="home" color={color} />,
+          tabBarIcon: ({ color }) => <VectorIcon name="home" color={color} />,
         }}
       />
       <Tabs.Screen
@@ -19,7 +19,7 @@ const TabLayout = () => {
         options={{
           headerShown: false,
           title: 'Create',
-          tabBarIcon: ({ color }) => <TabBarIcon name="add-circle-outline" color={color} />,
+          tabBarIcon: ({ color }) => <VectorIcon name="add-circle-outline" color={color} />,
         }}
       />
       <Tabs.Screen
@@ -27,7 +27,7 @@ const TabLayout = () => {
         options={{
           headerShown: false,
           title: 'Reels',
-          tabBarIcon: ({ color }) => <TabBarIcon name="album" color={color} />,
+          tabBarIcon: ({ color }) => <VectorIcon name="album" color={color} />,
         }}
       />
       <Tabs.Screen
@@ -35,7 +35,7 @@ const TabLayout = () => {
         options={{
           headerShown: false,
           title: 'Profile',
-          tabBarIcon: ({ color }) => <TabBarIcon name="account-circle" color={color} />,
+          tabBarIcon: ({ color }) => <VectorIcon name="account-circle" color={color} />,
         }}
       />
     </Tabs>
