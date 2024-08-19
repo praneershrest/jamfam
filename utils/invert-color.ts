@@ -1,3 +1,9 @@
+/**
+ * This utility is copied from https://github.com/onury/invert-color
+ * Does not violate their MIT license https://github.com/onury/invert-color/blob/master/LICENSE
+ * Copied the code instead of installing the package to avoid dependencies and unneeded bloating
+ */
+
 // -------------------------------
 // TYPES / INTERFACES
 // -------------------------------
@@ -108,6 +114,35 @@ function invertToBW(
 // -------------------------------
 // PUBLIC MEMBERS
 // -------------------------------
+
+/**Usage:
+ * invert('#000')              // —> #ffffff
+ * invert('#282b35')           // —> #d7d4ca
+ *
+ * // input color as RGB array or object
+ * invert([69, 191, 189])              // —> #ba4042
+ * invert({ r: 249, g: 119, b: 121 })  // —> #068886
+ *
+ * // amplify to black or white
+ * invert('#282b35', true)     // —> #ffffff
+ *
+ * // amplify to custom black or white color
+ * invert('#282b35', { black: '#3a3a3a', white: '#fafafa' })     // —> #fafafa
+ *
+ * // amplify with custom luminance threshold (default is invert.defaultThreshold = ~0.179)
+ * invert('#282b35', { black: '#3a3a3a', white: '#fafafa', threshold: 0.01 })     // —> #3a3a3a
+ *
+ * ### invert.asRGB(color[, bw])
+ * Invert and output result as RGB **object**.
+ * invert.asRGB('#fff')          // —> { r: 0, g: 0, b: 0 }
+ *
+ * ### `invert.asRgbArray(color[, bw])`
+ * Invert and output result as RGB **array**.
+ * invert.asRgbArray('#000')      // —> [255, 255, 255]
+ *
+ * ### bw option
+ * This is useful in case, you need to create contrast (i.e. background vs foreground, for better readability). The animation at the top is a demonstration.
+ */
 
 /**
  *  Generates inverted (opposite) version of the given color.
