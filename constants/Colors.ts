@@ -21,8 +21,19 @@ export const Colors = {
     text: '#ECEDEE',
     background: '#151718',
     tint: tintColorDark,
-    icon: '#9BA1A6',
+    icon: '#ECEDEE',
     tabIconDefault: '#9BA1A6',
     tabIconSelected: tintColorDark,
   },
+  buttonGradientLight: {
+    primary: '#FF8C00',
+    secondary: '#fdf542',
+    underlay: '#FFEF5A'
+  },
+  buttonGradientDark: {
+    primary: '#000080',  
+    secondary: '#4B0082', 
+    underlay: '#000080'  
+  },
+
 }
