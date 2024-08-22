@@ -2,7 +2,7 @@ import { Stack } from 'expo-router'
 
 import { Colors } from '@/constants/Colors'
 import VectorIcon from '@/components/VectorIcon'
-import TabBarLink from '@/components/TabBarLink'
+import LinkTouchableOpacity from '@/components/LinkTouchableOpacity'
 
 const HomeLayout = () => {
   return (
@@ -12,14 +12,14 @@ const HomeLayout = () => {
         options={{
           title: 'Home',
           headerLeft: () => (
-            <TabBarLink href="/home/settings">
+            <LinkTouchableOpacity href="/home/settings">
               <VectorIcon name="settings" color={Colors.light.tabIconSelected} />
-            </TabBarLink>
+            </LinkTouchableOpacity>
           ),
           headerRight: () => (
-            <TabBarLink href="/home/messages">
+            <LinkTouchableOpacity href="/home/messages">
               <VectorIcon name="message" color={Colors.light.tabIconSelected} />
-            </TabBarLink>
+            </LinkTouchableOpacity>
           ),
         }}
       />
