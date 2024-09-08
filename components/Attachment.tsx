@@ -21,6 +21,7 @@ import * as ImagePicker from 'expo-image-picker'
 import * as DocumentPicker from 'expo-document-picker'
 import { AttachmentType } from '@/types/attachmentType'
 import { useFocusEffect } from '@react-navigation/native'
+import { s } from 'react-native-size-matters'
 
 type Props = React.ComponentPropsWithRef<typeof View> & {
   /**
@@ -56,7 +57,7 @@ type Props = React.ComponentPropsWithRef<typeof View> & {
    */
   setAttachment: React.Dispatch<React.SetStateAction<AttachmentType | null>>
   /**
-   * How the media (image or video) should be resized when rendered.
+   * How the media (image or video) should be resized when rendered. Either contain or cover the container
    */
   resizeMode: string
   /**
@@ -377,14 +378,14 @@ const Attachment = ({
                     name="play-circle-outline"
                     type="MaterialIcons"
                     color={Colors.white}
-                    size={100}
+                    size={s(100)}
                   />
                 </View>
               )}
             </Pressable>
           )}
           <TouchableOpacity style={styles.resetButton} onPress={resetAttachment}>
-            <VectorIcon name="close" type="MaterialIcons" color="white" size={24} />
+            <VectorIcon name="close" type="MaterialIcons" color="white" size={s(24)} />
           </TouchableOpacity>
         </View>
       )}
