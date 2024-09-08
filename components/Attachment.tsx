@@ -11,7 +11,7 @@ import {
   useColorScheme,
   Alert,
   Pressable,
-  ImageResizeMode 
+  ImageResizeMode,
 } from 'react-native'
 import { Video, Audio, ResizeMode } from 'expo-av'
 import { Colors } from '@/constants/Colors'
@@ -315,11 +315,7 @@ const Attachment = ({
             locations={[0, 0.8]}
             style={[{ borderRadius: borderRadius }, styles.linearGradientContainer]}>
             {isLoading ? (
-              <ActivityIndicator
-                size="large"
-                color={Colors.white}
-                style={styles.loadingSpinner}
-              />
+              <ActivityIndicator size="large" color={Colors.white} style={styles.loadingSpinner} />
             ) : (
               <>
                 <VectorIcon name="upload" type="MaterialIcons" color={iconColor} size={100} />
