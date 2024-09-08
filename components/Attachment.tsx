@@ -11,8 +11,9 @@ import {
   useColorScheme,
   Alert,
   Pressable,
+  ImageResizeMode 
 } from 'react-native'
-import { Video, Audio } from 'expo-av'
+import { Video, Audio, ResizeMode } from 'expo-av'
 import { Colors } from '@/constants/Colors'
 import { LinearGradient } from 'expo-linear-gradient'
 import VectorIcon from './VectorIcon'
@@ -59,7 +60,7 @@ type Props = React.ComponentPropsWithRef<typeof View> & {
   /**
    * How the media (image or video) should be resized when rendered. Either contain or cover the container
    */
-  resizeMode: string
+  resizeMode: ImageResizeMode | ResizeMode
   /**
    * The mode of the component, determining where you're using the component (e.g., 'reel', 'profile', or 'cover' (as in cover photo)).
    */
@@ -152,7 +153,7 @@ const Attachment = ({
   ) => {
     setIsLoading(true)
 
-    let alertOptions = []
+    let alertOptions: any[] = []
     let msg = ''
 
     // Adjust the options based on the mode
@@ -188,11 +189,11 @@ const Attachment = ({
               type: 'audio/*',
             })
             if (!result.canceled && result.assets && result.assets.length > 0) {
-              const { uri, fileName } = result.assets[0]
+              const { uri, name } = result.assets[0]
               setAttachment({
                 type: 'audio',
                 uri: uri,
-                name: fileName,
+                name: name,
               })
               const { sound } = await Audio.Sound.createAsync({ uri: uri }, { shouldPlay: false })
               setAudioRef(sound)
@@ -316,7 +317,7 @@ const Attachment = ({
             {isLoading ? (
               <ActivityIndicator
                 size="large"
-                color={Colors.primary}
+                color={Colors.white}
                 style={styles.loadingSpinner}
               />
             ) : (
@@ -340,7 +341,7 @@ const Attachment = ({
         <View style={styles.contentContainer}>
           {attachment.type === 'image' ? (
             <Image
-              resizeMode={resizeMode}
+              resizeMode={resizeMode as ImageResizeMode}
               source={{ uri: attachment.uri }}
               style={[{ borderRadius: borderRadius }, styles.mediaContainer]} // Combine the inline and external styles
               onLoad={handleContentLoad}
@@ -350,7 +351,7 @@ const Attachment = ({
               {isLoading && (
                 <ActivityIndicator
                   size="large"
-                  color={Colors.primary}
+                  color={Colors.white}
                   style={styles.loadingSpinner}
                 />
               )}
@@ -359,7 +360,7 @@ const Attachment = ({
                   ref={videoRef}
                   source={{ uri: attachment.uri }}
                   rate={1.0}
-                  resizeMode={resizeMode}
+                  resizeMode={resizeMode as ImageResizeMode}
                   shouldPlay={isPlaying}
                   onLoad={handleContentLoad}
                   style={[{ borderRadius: borderRadius }, styles.media]}
