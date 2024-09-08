@@ -10,7 +10,7 @@ import {
 import React from 'react'
 import { AvatarSize } from '@/constants/Size'
 
-type AvatarImageSource = ImageSourcePropType | ((props: { size: number }) => React.ReactNode)
+export type AvatarImageSource = ImageSourcePropType | ((props: { size: number }) => React.ReactNode)
 
 type Props = React.ComponentPropsWithRef<typeof View> & {
   /**
