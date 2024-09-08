@@ -66,7 +66,7 @@ type Props = React.ComponentPropsWithRef<typeof View> & {
   mode: string
 }
 
-const defaultImageUri = 'https://via.placeholder.com/300x200' //TO-DO change this to whatever we decide the default image will
+const defaultImageUri = 'https://via.placeholder.com/300x200' //TO-DO change this to whatever we decide the default image will be
 
 /**
  * Attachment is for any area where the user needs to upload files. This includes audio, video for reels, or image files for profile
@@ -303,7 +303,7 @@ const Attachment = ({
 
   return (
     <View style={[{ width: width, height: height, backgroundColor: backgroundColor }]}>
-      {!attachment ? (
+      {!attachment ? ( // if attachment exists render the upload button
         <TouchableOpacity
           style={styles.buttonContainer}
           onPress={() => selectAttachment(setAttachment, mode)}>
@@ -336,6 +336,7 @@ const Attachment = ({
           </LinearGradient>
         </TouchableOpacity>
       ) : (
+        // Otherwise render the image/video/audio
         <View style={styles.contentContainer}>
           {attachment.type === 'image' ? (
             <Image
