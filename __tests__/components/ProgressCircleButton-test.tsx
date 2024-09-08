@@ -99,4 +99,23 @@ describe('ProgressCircleButton', () => {
     expect(percentageText.props.style.fontSize).toBe(20)
     expect(percentageText.props.style.color).toBe('red')
   })
+
+  it('calls custom callbacks on press in and out', () => {
+    const customProps = {
+      ...baseProps,
+      onPressIn: jest.fn(),
+      onPressOut: jest.fn(),
+    }
+
+    const { getByTestId } = render(<ProgressCircleButton {...customProps} />)
+
+    // Simulate press in
+    const svgElement = getByTestId('ProgressCircleButton-Circle')
+    fireEvent(svgElement, 'onPressIn')
+    expect(customProps.onPressIn).toHaveBeenCalled()
+
+    // Simulate press out
+    fireEvent(svgElement, 'onPressOut')
+    expect(customProps.onPressOut).toHaveBeenCalled()
+  })
 })

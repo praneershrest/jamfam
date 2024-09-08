@@ -67,6 +67,14 @@ type ProgressCircleButtonProps = {
    */
   percentageTextStyles?: StyleProp<TextStyle>
   /**
+   * Callback function called immediately when a touch is engaged, before onPressOut and onPress.
+   */
+  onPressIn?: () => void
+  /**
+   * Callback function called when a touch is released.
+   */
+  onPressOut?: () => void
+  /**
    * Callback function when the animation is completed.
    */
   onCompleted?: () => void
@@ -102,6 +110,8 @@ const ProgressCircleButton = ({
   percentageTextStyles = {
     ...Fonts.default.bodySmall,
   },
+  onPressIn,
+  onPressOut,
   onCompleted,
 }: ProgressCircleButtonProps) => {
   const halfCircle = radius + strokeWidth
@@ -138,12 +148,14 @@ const ProgressCircleButton = ({
     }
   }, [strokeColor]) as AnimatedProps<TextInput>
 
-  const onPressIn = () => {
+  const handlePressIn = () => {
     strokeOffset.value = 0
+    onPressIn && onPressIn()
   }
 
-  const onPressOut = () => {
+  const handlePressOut = () => {
     strokeOffset.value = circumference
+    onPressOut && onPressOut()
   }
 
   return (
@@ -188,8 +200,8 @@ const ProgressCircleButton = ({
         width={radius * 2}
         height={radius * 2}
         viewBox={`0 0 ${halfCircle * 2} ${halfCircle * 2}`}
-        onPressIn={onPressIn}
-        onPressOut={onPressOut}
+        onPressIn={handlePressIn}
+        onPressOut={handlePressOut}
         onLongPress={onCompleted}
         delayLongPress={duration}
         testID="ProgressCircleButton-Svg">
