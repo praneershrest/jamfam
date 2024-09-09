@@ -10,3 +10,8 @@ export const AvatarSize = {
 export const VectorIconSize = {
   default: s(28),
 }
+
+export const ButtonSize = {
+  defaultWidth: 48,
+  defaultHeight: 48,
+}

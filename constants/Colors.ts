@@ -26,4 +26,14 @@ export const Colors = {
     tabIconDefault: '#9BA1A6',
     tabIconSelected: tintColorDark,
   },
+  buttonGradientLight: {
+    primary: '#FF8C00',
+    secondary: '#fdf542',
+    underlay: '#FFEF5A',
+  },
+  buttonGradientDark: {
+    primary: '#000080',
+    secondary: '#4B0082',
+    underlay: '#000080',
+  },
 }
