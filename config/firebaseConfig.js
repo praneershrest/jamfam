@@ -1,20 +1,22 @@
 // src/config/firebaseConfig.js
-import firebase from 'firebase/app';
-import 'firebase/storage';
-import Constants from 'expo-constants'; // Expo Constants to access environment variables
+import { initializeApp } from 'firebase/app'
+import { getStorage } from 'firebase/storage'
+import { getFirestore } from 'firebase/firestore'
+import Constants from 'expo-constants'
 
 // Initialize Firebase using environment variables
 const firebaseConfig = {
-  apiKey: Constants.extra.firebaseApiKey,
-  authDomain: Constants.extra.firebaseAuthDomain,
-  projectId: Constants.extra.firebaseProjectId,
-  storageBucket: Constants.extra.firebaseStorageBucket,
-  messagingSenderId: Constants.extra.firebaseMessagingSenderId,
-  appId: Constants.extra.firebaseAppId,
-};
-
-if (!firebase.apps.length) {
-  firebase.initializeApp(firebaseConfig);
+  apiKey: Constants.expoConfig.extra.firebaseApiKey,
+  authDomain: Constants.expoConfig.extra.firebaseAuthDomain,
+  projectId: Constants.expoConfig.extra.firebaseProjectId,
+  storageBucket: Constants.expoConfig.extra.firebaseStorageBucket,
+  messagingSenderId: Constants.expoConfig.extra.firebaseMessagingSenderId,
+  appId: Constants.expoConfig.extra.firebaseAppId,
+  measurementId: Constants.expoConfig.extra.firebaseMeasurementId,
 }
 
-export { firebase };
+const app = initializeApp(firebaseConfig)
+const storage = getStorage(app)
+const db = getFirestore(app)
+
+export { app, storage, db }

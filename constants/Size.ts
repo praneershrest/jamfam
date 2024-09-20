@@ -1,7 +1,17 @@
+/**
+ * https://github.com/nirsky/react-native-size-matters
+ */
+import { s } from 'react-native-size-matters'
+
 export const AvatarSize = {
-  default: 64,
+  default: s(64),
 }
 
 export const VectorIconSize = {
-  default: 28,
+  default: s(28),
+}
+
+export const ButtonSize = {
+  defaultWidth: 48,
+  defaultHeight: 48,
 }
