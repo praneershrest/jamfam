@@ -3,7 +3,7 @@ import { render } from '@testing-library/react-native'
 import * as Avatar from '@/components/Avatar'
 import { Colors } from '@/constants/Colors'
 import invert from '@/utils/invert-color'
-import { AvatarSize } from '@/constants/Size'
+import { AvatarSize } from '@/constants/Sizes'
 import { TextStyle } from 'react-native'
 
 // Mock the invert-color utility as a jest function

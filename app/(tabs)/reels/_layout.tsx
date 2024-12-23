@@ -6,6 +6,8 @@ const ReelsLayout = () => {
       <Stack.Screen
         name="index"
         options={{
+          // TODO: Hide header or not? If hiding then the snippet container size should be increased
+          headerShown: false,
           title: 'Reels',
         }}
       />

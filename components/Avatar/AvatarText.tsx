@@ -10,7 +10,7 @@ import {
 import React from 'react'
 import { Colors } from '@/constants/Colors'
 import invert from '@/utils/invert-color'
-import { AvatarSize } from '@/constants/Size'
+import { AvatarSize } from '@/constants/Sizes'
 
 type Props = React.ComponentPropsWithRef<typeof View> & {
   /**
