@@ -1,7 +1,7 @@
 import React from 'react'
 import { render, fireEvent } from '@testing-library/react-native'
 import * as Avatar from '@/components/Avatar'
-import { AvatarSize } from '@/constants/Size'
+import { AvatarSize } from '@/constants/Sizes'
 import { Image } from 'react-native'
 
 describe('Avatar.Image Component', () => {

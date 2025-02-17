@@ -2,7 +2,8 @@ import React from 'react'
 import { render } from '@testing-library/react-native'
 import VectorIcon, { VectorIconProps } from '@/components/VectorIcon'
 import { Colors } from '@/constants/Colors'
-import { VectorIconSize } from '@/constants/Size'
+import { VectorIconSize } from '@/constants/Sizes'
+import { s } from 'react-native-size-matters'
 
 // Mocking all icon imports
 jest.mock('@expo/vector-icons/AntDesign', () => ({ default: jest.fn(() => null) }))
@@ -48,7 +49,7 @@ describe('VectorIcon Component', () => {
     expect(mockedIcon).toHaveBeenCalledWith(
       expect.objectContaining({
         name: 'user',
-        size: VectorIconSize.default,
+        size: s(VectorIconSize.default),
         color: Colors.light.icon,
       }),
       {},
@@ -61,7 +62,7 @@ describe('VectorIcon Component', () => {
     expect(MaterialIcons).toHaveBeenCalledWith(
       expect.objectContaining({
         name: 'user',
-        size: VectorIconSize.default,
+        size: s(VectorIconSize.default),
         color: Colors.light.icon,
       }),
       {},
@@ -92,7 +93,7 @@ describe('VectorIcon Component', () => {
     expect(MaterialIcons).toHaveBeenCalledWith(
       expect.objectContaining({
         name: 'user',
-        size: VectorIconSize.default,
+        size: s(VectorIconSize.default),
         color: Colors.light.icon,
       }),
       {},

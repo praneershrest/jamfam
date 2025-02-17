@@ -12,7 +12,7 @@ import Animated, {
 import { s } from 'react-native-size-matters'
 
 import { HexColor } from '@/utils/invert-color'
-import { Fonts } from '@/constants/Font'
+import { Fonts } from '@/constants/Fonts'
 import { Colors } from '@/constants/Colors'
 
 const AnimatedCircle = Animated.createAnimatedComponent(Circle)

@@ -17,7 +17,6 @@ import { Video, Audio, ResizeMode } from 'expo-av'
 import { Colors } from '@/constants/Colors'
 import { LinearGradient } from 'expo-linear-gradient'
 import VectorIcon from './VectorIcon'
-import { ButtonSize } from '@/constants/Size'
 import * as ImagePicker from 'expo-image-picker'
 import * as DocumentPicker from 'expo-document-picker'
 import { AttachmentType } from '@/types/attachmentType'
@@ -87,8 +86,8 @@ const defaultImageUri = 'https://via.placeholder.com/300x200' //TO-DO change thi
  */
 
 const Attachment = ({
-  width = ButtonSize.defaultWidth,
-  height = ButtonSize.defaultHeight,
+  width = 39,
+  height = 39,
   backgroundColor = Colors.white,
   borderRadius = 0,
   btnText,

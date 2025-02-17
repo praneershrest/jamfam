@@ -8,7 +8,7 @@ import {
   StyleSheet,
 } from 'react-native'
 import React from 'react'
-import { AvatarSize } from '@/constants/Size'
+import { AvatarSize } from '@/constants/Sizes'
 
 type AvatarImageSource = ImageSourcePropType | ((props: { size: number }) => React.ReactNode)
 

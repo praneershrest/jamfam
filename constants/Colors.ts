@@ -10,6 +10,7 @@ export const Colors = {
   black: '#000000',
   white: '#ffffff',
   input: 'rgba(151, 151, 151, 0.25)',
+  inputGrey: 'F5F5F5',
   light: {
     text: '#11181C',
     background: '#fff',
