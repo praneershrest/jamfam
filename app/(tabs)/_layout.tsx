@@ -47,7 +47,7 @@ const TabLayout = () => {
         name="profile"
         options={{
           headerShown: false,
-          title: 'Profile',
+          title: '',
           tabBarIcon: ({ color }) => <VectorIcon name="account-circle" color={color} size={28} />,
         }}
       />
