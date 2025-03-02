@@ -3,12 +3,12 @@ import React from 'react'
 
 import TabSafeAreaView from '@/components/TabSafeAreaView'
 
-const Home = () => {
+const Message = () => {
   return (
     <TabSafeAreaView>
-      <Text>Home</Text>
+      <Text>Message</Text>
     </TabSafeAreaView>
   )
 }
 
-export default Home
+export default Message

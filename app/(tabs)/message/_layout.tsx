@@ -4,20 +4,20 @@ import { Colors } from '@/constants/Colors'
 import VectorIcon from '@/components/VectorIcon'
 import LinkTouchableOpacity from '@/components/LinkTouchableOpacity'
 
-const HomeLayout = () => {
+const MessageLayout = () => {
   return (
     <Stack>
       <Stack.Screen
         name="index"
         options={{
-          title: 'Home',
+          title: 'Message',
           headerLeft: () => (
-            <LinkTouchableOpacity href="/home/settings">
+            <LinkTouchableOpacity href="/message/settings">
               <VectorIcon name="settings" color={Colors.light.tabIconSelected} />
             </LinkTouchableOpacity>
           ),
           headerRight: () => (
-            <LinkTouchableOpacity href="/home/messages">
+            <LinkTouchableOpacity href="/message/messages">
               <VectorIcon name="message" color={Colors.light.tabIconSelected} />
             </LinkTouchableOpacity>
           ),
@@ -27,4 +27,4 @@ const HomeLayout = () => {
   )
 }
 
-export default HomeLayout
+export default MessageLayout

@@ -42,7 +42,7 @@
     "@expo/vector-icons": "^14.0.2",
     "@gorhom/bottom-sheet": "^4.6.4",
     "@react-navigation/native": "^7.0.14",
-    "dotenv": "^16.4.5",
+    "dotenv": "16.4.7",
     "expo": "~52.0.35",
     "expo-av": "~15.0.2",
     "expo-constants": "~17.0.3",
@@ -57,9 +57,9 @@
     "expo-system-ui": "~4.0.8",
     "expo-video-thumbnails": "~9.0.3",
     "expo-web-browser": "~14.0.2",
-    "firebase": "^10.13.2",
+    "firebase": "11.4.0",
     "lottie-react-native": "^7.1.0",
-    "ngrok": "^5.0.0-beta.2",
+    "ngrok": "4.3.3",
     "react": "18.3.1",
     "react-dom": "18.3.1",
     "react-native": "0.76.7",
@@ -93,5 +93,12 @@
       "prettier --write",
       "eslint --fix"
     ]
+  },
+  "expo": {
+    "doctor": {
+      "reactNativeDirectoryCheck": {
+        "listUnknownPackages": false
+      }
+    }
   }
 }

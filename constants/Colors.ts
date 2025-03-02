@@ -9,6 +9,7 @@ const tintColorDark = '#fff'
 export const Colors = {
   black: '#000000',
   white: '#ffffff',
+  add_button_orange: '#FA9200',
   input: 'rgba(151, 151, 151, 0.25)',
   inputGrey: 'F5F5F5',
   light: {
@@ -17,7 +18,7 @@ export const Colors = {
     tint: tintColorLight,
     icon: '#687076',
     tabIconDefault: '#687076',
-    tabIconSelected: tintColorLight,
+    tabIconSelected: '#000000',
   },
   dark: {
     text: '#ECEDEE',
