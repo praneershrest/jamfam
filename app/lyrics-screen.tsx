@@ -15,7 +15,7 @@ const LyricsScreen = () => {
         placeholderTextColor="#888"
       />
       <TouchableOpacity style={styles.backButton} onPress={() => router.push('/reels')}>
-        <VectorIcon name="cross" color={'#fff'} size={35} />
+        <VectorIcon name="cross" color={'#fff'} size={40} />
       </TouchableOpacity>
       <TouchableOpacity style={styles.button}>
         <Text style={styles.buttonText}>Next</Text>
@@ -57,7 +57,7 @@ const styles = StyleSheet.create({
   },
   backButton: {
     position: 'absolute', // Use absolute positioning
-    top: 60, // Distance from the top of the screen
+    top: 50, // Distance from the top of the screen
     left: 10, // Distance from the right of the scree
     paddingVertical: 10, // Reduced vertical padding
     paddingHorizontal: 20, // Reduced horizontal padding
