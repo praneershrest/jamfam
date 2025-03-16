@@ -21,7 +21,7 @@ const exampleProjectVid: ProjectReelProps = {
 }
 
 const Reels = () => {
-  setStatusBarStyle('light')
+  setStatusBarStyle('dark')
   return (
     <TabSafeAreaView>
       <ProjectReel {...exampleProjectVid} />
