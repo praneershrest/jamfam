@@ -46,6 +46,7 @@ const RootLayout = () => {
           <Stack>
             <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
             <Stack.Screen name="+not-found" />
+            <Stack.Screen name="lyrics-screen" options={{ headerShown: false }} />
           </Stack>
         </SafeAreaProvider>
       </BottomSheetModalProvider>

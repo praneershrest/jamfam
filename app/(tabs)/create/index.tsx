@@ -1,15 +1,19 @@
 import React, { useRef } from 'react'
 import TabSafeAreaView from '@/components/TabSafeAreaView'
-import { TouchableOpacity, StyleSheet, Text, View } from 'react-native'
+import { TouchableOpacity, StyleSheet, Text, View, Alert } from 'react-native'
 import { FontAwesome } from '@expo/vector-icons'
 import * as DocumentPicker from 'expo-document-picker'
 import * as ImagePicker from 'expo-image-picker'
 import BottomSheet from '@gorhom/bottom-sheet'
+import { useRouter } from 'expo-router'
 
 const Create = () => {
   const bottomSheetRef = useRef<BottomSheet>(null)
-
+  const router = useRouter()
   const handleOptionPress = async (optionType: 'lyrics' | 'audio' | 'video') => {
+    if (optionType === 'lyrics') {
+      router.push('/lyrics-screen') // Correctly call router.push
+    }
     if (optionType === 'audio') {
       try {
         const result = await DocumentPicker.getDocumentAsync({
