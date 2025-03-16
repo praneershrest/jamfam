@@ -4,7 +4,11 @@ import VectorIcon from '@/components/VectorIcon'
 
 const TabLayout = () => {
   return (
-    <Tabs screenOptions={{ tabBarActiveTintColor: Colors.light.tabIconSelected }}>
+    <Tabs
+      screenOptions={{
+        tabBarStyle: { backgroundColor: Colors.light.background },
+        tabBarActiveTintColor: Colors.light.tabIconSelected,
+      }}>
       <Tabs.Screen
         name="reels"
         options={{

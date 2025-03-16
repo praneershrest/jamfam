@@ -14,11 +14,11 @@ export const Colors = {
   inputGrey: 'F5F5F5',
   light: {
     text: '#11181C',
-    background: '#fff',
+    background: '#000000',
     tint: tintColorLight,
     icon: '#687076',
     tabIconDefault: '#687076',
-    tabIconSelected: '#000000',
+    tabIconSelected: '#ffffff',
   },
   dark: {
     text: '#ECEDEE',
