@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useCallback, useEffect, useRef, useState } from 'react'
 import TabSafeAreaView from '@/components/TabSafeAreaView'
 import { TouchableOpacity, StyleSheet, Text, View, Alert } from 'react-native'
 import { FontAwesome } from '@expo/vector-icons'
@@ -10,6 +10,15 @@ import { useRouter } from 'expo-router'
 const Create = () => {
   const bottomSheetRef = useRef<BottomSheet>(null)
   const router = useRouter()
+
+  const handleSheetChange = useCallback((index: number) => {
+    // if (index < 0) {
+    //   // sheet has been closed — snap it back open
+    //   // console.log(1)
+    //   bottomSheetRef.current?.snapToIndex(0)
+    // }
+    // console.log(bottomSheetRef.current?.snapToIndex(0))
+  }, [])
   const handleOptionPress = async (optionType: 'lyrics' | 'audio' | 'video') => {
     if (optionType === 'lyrics') {
       router.push('/lyrics-screen') // Correctly call router.push
@@ -64,7 +73,12 @@ const Create = () => {
   }
   return (
     <View style={styles.container}>
-      <BottomSheet ref={bottomSheetRef} index={0} snapPoints={['75%']}>
+      <BottomSheet
+        ref={bottomSheetRef}
+        index={0}
+        snapPoints={['75%']}
+        enablePanDownToClose={true}
+        onChange={handleSheetChange}>
         <Text style={styles.header}>Share your work.</Text>
         <Text style={styles.subHeader}>Choose from three ways to share your projects</Text>
         <TouchableOpacity style={styles.optionCard} onPress={() => handleOptionPress('lyrics')}>
